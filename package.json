@@ -1,0 +1,25 @@
+{
+  "name": "gulpstart",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "gulp": "^5.0.1",
+    "gulp-autoprefixer": "^10.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-sass": "^6.0.1",
+    "gulp-uglify-es": "^3.0.0",
+    "sass": "^1.107.1",
+    "swiper": "^14.4.0"
+  },
+  "dependencies": {
+    "gulp-concat": "^2.6.1"
+  }
+}
