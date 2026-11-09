@@ -25,9 +25,9 @@ function scripts(){
 }
 function styles() {
     return src('app/scss/style.scss')
+        .pipe(scss({ style: 'compressed' }))
         .pipe(autoprefixer({overrideBrowserslist:['last 10 version']}))
         .pipe(concat('style.min.css'))
-        .pipe(scss({ style: 'compressed' }))
         .pipe(dest('app/css'))
         .pipe(browserSync.stream())
 }
