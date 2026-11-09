@@ -1,4 +1,11 @@
-@use 'variables';
 @use 'fonts'; 
+.bodypage {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 400;
+  background-color: #68a6df50;
+  max-width: 1208px;
+  margin: auto;
+}
+@use 'variables';
 @use 'reset'; 
 @use 'mission'
