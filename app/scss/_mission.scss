@@ -1,0 +1,45 @@
+.mission {
+    padding: 40px 0;
+    background-color: #ffffff;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        gap: 15px;
+    }
+
+    &__title {
+        font-family: $font-main;
+        font-size: 28px;
+        font-weight: 700; // Используем Bold, который подключили
+        color: $color-text-main;
+        margin: 0;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+    }
+
+    &__text {
+        font-family: $font-main;
+        font-size: 18px;
+        line-height: 1.5;
+        color: $color-text-main;
+        max-width: 50%; // Текст занимает половину
+    }
+
+    &__image {
+        max-width: 40%;
+        width: 100%;
+        background-color: #f0f0f0; // Временный серый фон вместо картинки
+        height: 200px; // Временная высота
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #999;
+    }
+}

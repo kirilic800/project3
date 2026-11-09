@@ -1,4 +1,4 @@
-@import "reset.scss";
-.bodypage{
-    background-color: aqua;
-}
+@use 'variables';
+@use 'fonts'; 
+@use 'reset'; 
+@use 'mission'
