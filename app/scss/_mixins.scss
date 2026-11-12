@@ -7,20 +7,20 @@
 }
 
 // миксин для иконки в кружке
-@mixin icon-circle($bg-color) {
+@mixin icon-circle($bg-color, $circle-width, $circle-height, $icon-width, $icon-height) {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 56px;
-    height: 56px;
+    width: $circle-width;
+    height: $circle-height;
     background-color: $bg-color;
     border-radius: 50%;
     flex-shrink: 0; 
     
     img {
         display: block;
-        width: 32px;
-        height: 32px;
+        width: $icon-width;
+        height: $icon-height;
     }
 }
 
@@ -31,4 +31,13 @@
     font-weight: 700;
     color: $color-text-main;
     margin: 0;
-} 
+}
+
+@mixin block-image($size_width,$size_height) { 
+    padding-right: 0;
+    //!!!
+    img { //!!!!!!!!!!!!!!
+        max-width: $size_width;   
+        max-height: $size_height;
+    }
+}
