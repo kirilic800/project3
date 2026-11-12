@@ -1,0 +1,11 @@
+.mission {
+    &__text {
+        padding: 40px 16px;
+        font-family: $font-main;
+        font-size: 22px;
+        line-height: 1.45;
+        color: #555555;
+        max-width: 50%; 
+        margin: 0;
+    }
+}
