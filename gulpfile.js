@@ -9,7 +9,7 @@ const autoprefixer = require('gulp-autoprefixer').default;
 const clean = require('gulp-clean');
 
 function watching(){
-    watch(['app/scss/*.scss'], styles)
+    watch(['app/scss/style.scss'], styles)
     watch(['app/js/main.js'], scripts)
     watch(['app/*.html']).on('change', browserSync.reload)
 }
@@ -24,12 +24,23 @@ function scripts(){
         .pipe(browserSync.stream())
 }
 function styles() {
-    return src('app/scss/style.scss')
-        .pipe(scss({ style: 'compressed' }))
-        .pipe(autoprefixer({overrideBrowserslist:['last 10 version']}))
-        .pipe(concat('style.min.css'))
+     return src([
+        'app/scss/_variables.scss',
+        'app/scss/_mixins.scss',
+        'app/scss/_fonts.scss',
+        'app/scss/_reset.scss',
+        'app/scss/style.scss',
+        
+        // Берем файлы миссии в нужном порядке (сначала главный, потом элементы)
+        'app/scss/mission/mission.scss',
+        'app/scss/mission/**/*.scss' 
+    ])
+        .pipe(concat('temp.scss')) // <--- СКЛЕИВАЕМ ВСЁ В ОДИН ВИРТУАЛЬНЫЙ ФАЙЛ
+        .pipe(scss({ style: 'compressed' })) // Компилируем то, что склеили
+        .pipe(autoprefixer({ overrideBrowserslist: ['last 10 version'] }))
+        .pipe(concat('style.min.css')) // Переименовываем
         .pipe(dest('app/css'))
-        .pipe(browserSync.stream())
+        .pipe(browserSync.stream());
 }
 
 function browsersync() {
