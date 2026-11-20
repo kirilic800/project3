@@ -1,0 +1,5 @@
+.mission {
+    &__title {
+        @include section-title; 
+    }
+}

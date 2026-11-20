@@ -1,0 +1,5 @@
+.mission {
+    &__image {
+       @include block-image(462px, 251px);
+    }
+}

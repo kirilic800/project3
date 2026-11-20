@@ -1,0 +1,81 @@
+.values {
+    &__card {
+        height: 213px;
+        width: calc((100% - 48px) / 3);
+        border-radius: 12px;
+        font-size: 32px;
+        font-weight: 500;
+        display: flex;
+        
+    }
+
+  
+    &__card_title {
+        font-family: $font-main;
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 16px;
+        color: #101828BF;
+
+         &--dark {
+            background-color: #5C6777; 
+            color: #ffffff; 
+            border-radius: 30px; 
+            padding: 8px 16px;
+            text-align: center;
+        }
+        &--blue {
+            background-color: #2F9AFF; 
+            color: #ffffff; 
+            border-radius: 30px; 
+            padding: 8px 16px;
+            text-align: center;
+        }
+        &--nblue {
+            background-color: #3045E6; 
+            color: #ffffff; 
+            border-radius: 30px; 
+            padding: 8px 16px;
+            text-align: center;
+        }
+    }
+
+    &__card_list {
+        list-style: disc;
+        padding-left: 24px;
+    }
+    &__card_text {
+            font-family: $font-main;
+            font-size: 16px;
+            font-weight: 400;
+            color: #101828BF;
+            &_min{
+                font-size: 16px; //!!!!!!!!!
+            }
+            //position: relative;
+
+            // &::before {
+            //     content: "";
+            //     position: absolute;
+            //     left: 0;
+            //     top: 8px;
+            //     width: 9px;
+            //     height: 9px;
+            //     border-radius: 50%;
+            //     background-color: $color-primary;
+            // }
+        }
+     &__card_color {
+        &_purple   { background-color: #D6D9DD; }
+        &--blue    { background-color: #D5EBFF; }
+        &--teal    { background-color: #D6DAFA; }
+        &--green   { background-color: #CCF3F0; }
+        &--gray    { background-color: #E5EAF0; }
+
+        &--purpleb  { background-color: #EBECEE; }
+        &--blueb    { background-color: #EBF5FF; }
+        &--tealb    { background-color: #EBEDFD; }
+        &--greenb   { background-color: #E6F9F7; }
+        &--grayb    { background-color: #E6F9F7; }
+    }
+}

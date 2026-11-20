@@ -1,0 +1,43 @@
+// миксин для заголовков секций 
+@mixin section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+// миксин для иконки в кружке
+@mixin icon-circle($bg-color, $circle-width, $circle-height, $icon-width, $icon-height) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $circle-width;
+    height: $circle-height;
+    background-color: $bg-color;
+    border-radius: 50%;
+    flex-shrink: 0; 
+    
+    img {
+        display: block;
+        width: $icon-width;
+        height: $icon-height;
+    }
+}
+
+// миксин для заголовка 
+@mixin section-title {
+    font-family: $font-main;
+    font-size: 28px;
+    font-weight: 700;
+    color: $color-text-main;
+    margin: 0;
+}
+
+@mixin block-image($size_width,$size_height) { 
+    
+    //!!!
+    img { //!!!!!!!!!!!!!!
+        max-width: $size_width;   
+        max-height: $size_height;
+    }
+}
